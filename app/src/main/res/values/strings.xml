@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Traffic Layers</string>
+    <string name="traffic_flow">Traffic flow</string>
+    <string name="traffic_incidents">Traffic incidents</string>
+</resources>

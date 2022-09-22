@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tomtom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="trafficLayers"
+            type="com.example.trafficlayers.TrafficLayers" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/traffic_flow_switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="@{trafficLayers.trafficFlow}"
+            android:fontFamily="@font/roboto"
+            android:padding="@dimen/default_padding"
+            android:text="@string/traffic_flow"
+            android:textSize="@dimen/text_size" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/traffic_incidents_switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="@{trafficLayers.trafficIncidents}"
+            android:fontFamily="@font/roboto"
+            android:padding="@dimen/default_padding"
+            android:text="@string/traffic_incidents"
+            android:textSize="@dimen/text_size" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/map_container"
+            android:name="com.tomtom.sdk.maps.display.ui.MapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tomtom:cameraPositionLatitude="37.766428"
+            tomtom:cameraPositionLongitude="-122.440822"
+            tomtom:cameraPositionZoom="10"
+            tomtom:mapKey="@string/API_KEY" />
+
+    </LinearLayout>
+</layout>
