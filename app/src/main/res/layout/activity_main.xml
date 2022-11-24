@@ -38,7 +38,7 @@
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/map_container"
-            android:name="com.tomtom.sdk.maps.display.ui.MapFragment"
+            android:name="com.tomtom.sdk.map.display.ui.MapFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tomtom:cameraPositionLatitude="37.766428"

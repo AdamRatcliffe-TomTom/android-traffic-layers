@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import com.example.trafficlayers.databinding.ActivityMainBinding
-import com.tomtom.sdk.maps.display.ui.MapFragment
+import com.tomtom.sdk.map.display.ui.MapFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private lateinit var tomTomMap: com.tomtom.sdk.maps.display.TomTomMap
+    private lateinit var tomTomMap: com.tomtom.sdk.map.display.TomTomMap
 
     private val trafficLayers: TrafficLayers = TrafficLayers()
 
